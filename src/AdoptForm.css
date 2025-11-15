@@ -1,0 +1,93 @@
+/* Page background and layout */
+body {
+  background-color: #fff8dc;
+  font-family: "Comic Sans MS", cursive;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Back button (top-right corner) */
+.back-button {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  background-color: #ff9966;
+  color: white;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: "Comic Sans MS", cursive;
+  transition: background 0.3s;
+}
+
+.back-button:hover {
+  background-color: #cc3300;
+}
+
+/* Main container (centers the form vertically & horizontally) */
+.adopt-container {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Form design */
+form {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px gray;
+  width: 320px;
+  text-align: center;
+}
+
+/* Input fields & text area styling */
+input,
+textarea {
+  display: block;
+  margin: 12px auto;
+  padding: 10px;
+  width: 90%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: "Comic Sans MS", cursive;
+  background-color: #f8f9fc;
+  transition: border-color 0.3s;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #ff9966;
+}
+
+/* Submit button styling */
+button {
+  background-color: #ff9966;
+  color: white;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: "Comic Sans MS", cursive;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #cc3300;
+}
+
+/* Notification message */
+.notification {
+  color: green;
+  margin-bottom: 15px;
+  font-weight: bold;
+}

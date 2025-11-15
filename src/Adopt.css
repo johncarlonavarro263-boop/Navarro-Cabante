@@ -1,0 +1,194 @@
+/* Reset and base style */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fdf6f0;
+  color: #4b2e39;
+  text-align: center;
+}
+
+/* HEADER */
+header {
+  background: linear-gradient(90deg, #ffcc66, #ff9966);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px 60px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header wrapper to space out title, nav, and button */
+.header-wrapper {
+  display: flex;
+  justify-content: space-between; /* Logo left, nav center, button right */
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Logo / title */
+header h1 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #000;
+  letter-spacing: 1px;
+}
+
+header h1 span {
+  color: rgb(241, 159, 6);
+  text-transform: capitalize;
+}
+
+/* Nav links */
+.nav-links {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  align-items: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  font-weight: 600;
+  transition: 0.3s;
+  position: relative;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #000;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* Admin Login button (right side) */
+.admin-login {
+  margin-left: auto;
+}
+
+.admin-login a {
+  background-color: rgb(241, 159, 6);
+  color: white;
+  padding: 10px 22px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.admin-login a:hover {
+  background-color: white;
+  color: rgb(235, 162, 5);
+  border: 1px solid gray;
+  transform: scale(1.05);
+}
+
+.admin-login a:active {
+  transform: scale(0.97);
+}
+
+/* MAIN CONTENT */
+main {
+  padding-top: 160px;
+}
+
+.dog-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.dog-card {
+  border-radius: 10px;
+  padding: 15px;
+  margin: 15px;
+  width: 250px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  background: #fff;
+}
+
+.dog-card:hover {
+  transform: translateY(-10px);
+}
+
+.dog-card img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.dog-info p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.adopt-button {
+  display: inline-block;
+  background-color: #ff9966;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.adopt-button:hover {
+  background-color: #cc3300;
+}
+
+/* Notification and footer */
+.notification {
+  background-color: #4caf50;
+  color: white;
+  padding: 15px 25px;
+  margin: 20px auto;
+  border-radius: 8px;
+  font-size: 18px;
+  text-align: center;
+  width: 80%;
+  max-width: 600px;
+  font-weight: bold;
+}
+
+.error {
+  background-color: #f44336;
+}
+
+footer {
+  background-color: #ffcc66;
+  padding: 10px;
+  margin-top: 40px;
+  font-weight: 600;
+}

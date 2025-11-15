@@ -1,0 +1,118 @@
+/* Reset defaults */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Header */
+header {
+  width: 100%;
+  background: linear-gradient(90deg, #10100f, #e2af6c);
+  padding: 20px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #222;
+}
+
+header h1 span {
+  color: #f6a700;
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #aa3737;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: capitalize;
+  transition: 0.2s;
+}
+
+.nav-links a:hover {
+  color: rgb(241, 159, 6);
+  transform: scale(1.1);
+}
+
+/* Info section */
+.info-section {
+  padding: 60px 80px;
+  background-color: rgba(255, 255, 255, 0.95);
+  margin: 100px auto 60px;
+  border-radius: 15px;
+  width: 85%;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.info-section h2 {
+  font-size: 32px;
+  color: rgb(241, 159, 6);
+  margin-bottom: 20px;
+  font-weight: 800;
+}
+
+.info-section p {
+  font-size: 18px;
+  color: #333;
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+/* Footer */
+h4 {
+  font-size: 14px;
+  text-align: center;
+  margin-top: auto;
+  padding: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #555;
+  font-weight: 500;
+}
+
+/* --- Centering fix (added only this part below) --- */
+.about-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-content {
+  max-width: 700px;
+  margin: 0 auto;
+}

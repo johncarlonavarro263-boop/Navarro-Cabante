@@ -1,0 +1,158 @@
+/* Reset defaults */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-image: url("/bg2.avif");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Header and Navbar */
+header {
+  background: linear-gradient(90deg, #ffcc66, #ff9966);
+  padding: 25px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+header h1 {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+header h1 span {
+  color: rgb(241, 159, 6);
+  text-transform: capitalize;
+}
+
+.nav-links {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 40px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: capitalize;
+  transition: 0.2s;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+.auth-button {
+  font-size: 17px;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(241, 159, 6);
+  color: white;
+  cursor: pointer;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 600;
+  transition: 0.3s;
+  text-transform: capitalize;
+}
+
+.auth-button:hover {
+  background-color: white;
+  color: rgb(235, 162, 5);
+  border: 1px solid gray;
+}
+
+.main {
+  min-height: 100vh;
+  width: 100%;
+  background-color: rgba(245, 248, 253, 0.9);
+  padding-top: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 36px;
+  font-weight: 800;
+  color: rgb(241, 159, 6);
+  text-transform: capitalize;
+  letter-spacing: 2px;
+}
+
+/* Service Grid */
+.service-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.service {
+  background: #fff3d6;
+  padding: 35px;
+  border-radius: 15px;
+  width: 320px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.service:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+.service h3 {
+  color: rgb(241, 159, 6);
+  margin-bottom: 15px;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.service p {
+  color: #444;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* Footer */
+h4 {
+  font-size: 14px;
+  text-align: center;
+  margin-top: 40px;
+  padding-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #555;
+  font-weight: 500;
+}

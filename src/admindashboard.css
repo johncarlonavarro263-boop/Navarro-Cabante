@@ -1,0 +1,217 @@
+/* ===== HEADER SECTION ===== */
+header {
+  background: linear-gradient(90deg, #ffcc66, #ff9966);
+  padding: 30px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+/* DogCare Title */
+header h1 {
+  font-size: 26px;
+  font-weight: bold;
+  color: #4b2e39;
+}
+
+header h1 span {
+  color: rgb(241, 159, 6);
+}
+
+/* Center nav links */
+.nav-links {
+  display: flex;
+  gap: 40px;
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: capitalize;
+  transition: 0.2s;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* Right-side logout button */
+.logout-btn {
+  position: absolute;
+  right: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.logout-btn button {
+  font-size: 17px;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(241, 159, 6);
+  color: white;
+  cursor: pointer;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 600;
+  transition: 0.3s;
+  text-transform: capitalize;
+}
+
+.logout-btn button:hover {
+  background-color: white;
+  color: rgb(235, 162, 5);
+  border: 1px solid gray;
+  text-decoration: none;
+}
+
+/* ===== DOG LIST & CARDS ===== */
+.dog-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 20px;
+}
+
+/* Card container */
+.dog-card {
+  background-color: #fff8e7;
+  border-radius: 12px;
+  padding: 18px;
+  margin: 12px;
+  width: 260px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  text-align: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Hover lift */
+.dog-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Image */
+.dog-card img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* Name/title */
+.dog-card h3 {
+  font-weight: 800;
+  font-size: 20px;
+  margin: 6px 0 10px;
+  color: #c53d00;
+}
+
+/* General paragraph style (fallback) */
+.dog-card p {
+  margin: 6px 0;
+  font-size: 14.5px;
+  color: #444;
+  line-height: 1.4;
+}
+
+/* Highlighted Breed / Age / Status */
+.dog-card p:nth-of-type(1),
+.dog-card p:nth-of-type(2),
+.dog-card p:nth-of-type(3),
+.dog-card .dog-description {
+  background: #fffdf2;
+  border-radius: 8px;
+  padding: 8px 10px;
+  width: calc(100% - 20px);
+  text-align: left;
+  margin: 6px auto;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  color: #333;
+  font-size: 14px;
+}
+
+/* Make labels more prominent */
+.dog-card p:nth-of-type(1),
+.dog-card p:nth-of-type(2),
+.dog-card p:nth-of-type(3) {
+  font-weight: 600;
+}
+
+/* Description line */
+.dog-card .dog-description {
+  font-weight: 400;
+  color: #444;
+}
+
+/* ===== Actions: Edit + Delete same-sized buttons ===== */
+.dog-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 12px;
+  width: 100%;
+  align-items: center; /* align both buttons vertically */
+}
+
+/* Equal-size buttons */
+.dog-actions a,
+.dog-actions button {
+  display: inline-block;
+  width: 110px;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 12px;
+  text-align: center;
+  background-color: #ff9966;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.18s ease, transform 0.12s ease;
+}
+
+/* Hover effect */
+.dog-actions a:hover,
+.dog-actions button:hover {
+  background-color: #cc3300;
+  transform: translateY(-2px);
+}
+
+/* Small screens: stack buttons */
+@media (max-width: 420px) {
+  .dog-card {
+    width: 90%;
+  }
+  .dog-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+  .dog-actions a,
+  .dog-actions button {
+    width: 80%;
+  }
+}
+
+/* --- ALIGN EDIT AND DELETE BUTTONS --- */
+.dog-actions {
+  display: flex;
+  justify-content: center;  /* center horizontally */
+  align-items: center;      /* align vertically */
+  gap: 12px;                /* even spacing between buttons */
+}

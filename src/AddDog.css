@@ -1,0 +1,167 @@
+body {
+  background-image: url("/dog-background.jpg");
+  background-size: cover;
+  background-position: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #4b2e39;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: linear-gradient(90deg, #ffcc66, #ff9966);
+  padding: 30px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.header-wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 26px;
+  font-weight: bold;
+  position: absolute;
+  left: 50px;
+}
+
+header h1 span {
+  color: rgb(241, 159, 6);
+  text-transform: capitalize;
+}
+
+.nav-links {
+  display: flex;
+  gap: 40px;
+  flex-grow: 1;
+  justify-content: center;
+  margin-right: 60px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: capitalize;
+  transition: 0.2s;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+.logout-btn {
+  position: absolute;
+  right: 150px;
+}
+
+.logout-btn a {
+  font-size: 17px;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(241, 159, 6);
+  color: white;
+  cursor: pointer;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 600;
+  transition: 0.3s;
+  text-transform: capitalize;
+  text-decoration: none;
+}
+
+.logout-btn a:hover {
+  background-color: white;
+  color: rgb(235, 162, 5);
+  border: 1px solid gray;
+}
+
+main {
+  padding-top: 120px;
+}
+
+.status-message {
+  text-align: center;
+  font-weight: bold;
+  color: green;
+}
+
+/* Outer box */
+.add-dog-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 600px;
+  margin: 20px auto;
+
+  /* ✅ Center inner form box */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Inner form */
+.add-dog-form {
+  width: 100%;
+  max-width: 450px;
+}
+
+/* Form fields */
+.add-dog-form .form-group {
+  margin-bottom: 15px;
+}
+
+.add-dog-form label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.add-dog-form input,
+.add-dog-form textarea,
+.add-dog-form select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+/* Button */
+.add-button {
+  background-color: #ff6600;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.add-button:hover {
+  background-color: #cc3300;
+}
+
+/* Image Preview */
+.image-preview {
+  display: block;
+  width: 150px;
+  margin-top: 10px;
+  border-radius: 10px;
+}
